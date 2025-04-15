@@ -22,3 +22,13 @@ php artisan migrate
 php artisan make:seeder PostSeeder
 php artisan db:seed
 
+
+## Concept
+Fewer Queries = Faster Inserts
+Instead of running thousands of small INSERT queries, chunking combines data into fewer, larger queries — drastically reducing database overhead.
+
+Leverages MySQL’s Strengths
+MySQL is optimized for handling bulk inserts efficiently. Sending large chunks (e.g., 500 records at a time) allows the database to process data faster with fewer transactions.
+
+Better Performance, Less Load
+Chunking reduces repeated parsing, connection handling, and disk writes — improving performance and lowering memory usage during seeding.
